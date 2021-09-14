@@ -1,0 +1,71 @@
+.myJumbotron{
+    background-color: #345;
+    color: #fff;
+    padding: 32px 32px;
+    text-align: center;
+}
+
+.myNavElement{
+    color: #549daf;
+    border-radius: 16px;
+    margin: 0% 25% 0% 25%;
+}
+
+body{
+    background-color: #1f1f1f;
+}
+
+.navBack{
+    background-color: #345;
+    padding: 0px 0px 25px 0px;
+}
+nav{
+    background-color: #fff;
+    text-align:center;
+    margin: 0px 100px 0px 100px;
+    border-radius: 16px;
+}
+
+#box,#box2{
+    background-color: #fff;
+    margin: 25px 100px 25px 100px;
+    border-radius: 32px;
+    padding: 12px 12px;
+}
+
+table{
+
+    width : 100%;
+    color: #fff;
+    background-color: #345;
+}
+
+th, td{
+    border: 2px solid #fff;
+    color: #fff;
+    background-color: #345;
+}
+a{
+    color: #ad1;
+}
+
+form{
+    margin: 0px 0px 0px 20px;
+}
+
+h2,h6{
+    text-align: center;
+}
+
+a:visited{
+    color: green;
+}
+
+div > img{
+    margin: 0% 25% 0% 25%;
+}
+
+
+div.myNavElement > strong{
+   margin: 0% 25% 0% 25%;
+}
