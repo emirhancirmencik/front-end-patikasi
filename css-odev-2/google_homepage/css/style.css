@@ -3,7 +3,7 @@
   margin: 10px;
   overflow: hidden;
   margin-right: 16px;
-  font-family: arial,sans-serif;
+  font-family: arial, sans-serif;
   font-size: 13px;
 }
 
@@ -13,6 +13,7 @@
   text-align: center;
   padding: 5px 5px;
   text-decoration: none;
+  float: right;
 }
 
 .headerli a:hover {
@@ -34,10 +35,13 @@
   margin: 0 auto;
   margin-top: -77px;
   width: 582px;
+  border-radius: 22px;
 }
 
-.search-area:hover {
-box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
+.search-area:hover,
+.googlesearch:hover,
+.feelinglucky:hover {
+  box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.24), 0 2px 5px 0 rgba(0, 0, 0, 0.19);
 }
 
 .search {
@@ -102,6 +106,8 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   text-align: start;
   appearance: textfield;
   cursor: text;
+  border: 0;
+  width: 480px;
 }
 
 .googlesearch {
@@ -151,9 +157,40 @@ box-shadow: 0 2px 3px 0 rgba(0,0,0,0.24), 0 2px 5px 0 rgba(0,0,0,0.19);
   font-size: 14px;
   margin-left: 14px;
   margin-right: -20px;
-  
 }
 
 .footerli a:hover {
   text-decoration: underline;
+}
+
+.voice-button {
+  display: flex;
+  align-items: center;
+  padding-right: 13px;
+  margin-top: -5px;
+}
+
+.voice-button span {
+  height: 20px;
+  width: 20px;
+  margin-top: 0px;
+  display: inline-block;
+  line-height: 24px;
+}
+
+.buttons {
+  width: 584px;
+  height: 58px;
+  margin: auto;
+  text-align: center;
+  padding-top: 18px;
+}
+.buttons button {
+  height: 36px;
+  font-size: 14px;
+  color: #5f6368;
+  border: 1px #f2f2f2;
+  font-family: arial;
+  border-radius: 4px;
+  margin: 11px 4px;
 }
