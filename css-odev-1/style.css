@@ -1,0 +1,60 @@
+/****************** HEADER ******************/
+.header-logo {
+  margin: 1%;
+  float: left;
+  height: 25%;
+  width: 15%;
+  border-radius: 50%;
+}
+
+.def-text {
+  font-size: 300%;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+header {
+  background-color: white;
+  color: rgb(100, 78, 123);
+  position: relative;
+}
+
+body {
+  margin: 0%;
+  backdrop-filter: blur(25px);
+
+  /* Full height */
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  /* Center and scale the image nicely */
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-element {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+nav {
+  overflow: visible;
+  background-color: white;
+  position: relative;
+}
+
+a {
+    color:rgb(100, 78, 123);
+    text-decoration:none;
+}
+
+product {
+    margin: 10px;
+    border-radius: 20%;
+}
