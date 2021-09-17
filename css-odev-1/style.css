@@ -20,18 +20,20 @@ header {
   position: relative;
 }
 
-body {
+.background-image {
+  background-image: url(img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: 0%;
-  backdrop-filter: blur(25px);
+  backdrop-filter: blur(10px);
 
   /* Full height */
-  height: 100%;
-  width: 100%;
-  position: absolute;
+  
+  position:absolute;
+  
   /* Center and scale the image nicely */
 
-  background-repeat: no-repeat;
-  background-size: cover;
+ 
 }
 
 .nav-element {
@@ -50,11 +52,50 @@ nav {
 }
 
 a {
-    color:rgb(100, 78, 123);
-    text-decoration:none;
+  color: rgb(100, 78, 123);
+  text-decoration: none;
 }
 
-product {
-    margin: 10px;
-    border-radius: 20%;
+.container {
+  
+  background-color: gray;
+  padding: 20px;
+  border-radius: 10px;
+  float: left;
+  margin: 20px;
+  position: relative;
+}
+
+
+.product {
+  
+  width: 300px;
+  height: 300px;
+}
+
+.container-text {
+  font-size: 150%;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  float: left;
+  margin-left: 25%;
+  position: relative;
+  align-self: center;
+  width:50%;
+}
+article {
+  margin-left: 30%;
+  position: relative;
+  margin: 7%;
+}
+
+footer {
+  padding: 1%;
+  float:left;
+  width:100%;
+  background-color:rgb(100, 78, 123);
+  
 }
