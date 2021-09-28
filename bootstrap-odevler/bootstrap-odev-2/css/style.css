@@ -9,11 +9,11 @@
 }
 
 input.empty {
-    font-family: FontAwesome;
-    font-style: normal;
-    font-weight: normal;
-    text-decoration: inherit;
-    background-color: #FAFAFA;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  background-color: #FAFAFA;
 }
 
 .postuserfont {
@@ -38,6 +38,7 @@ input.empty {
   text-align: center;
 }
 
+
 .rightpanellinks {
   text-decoration: none;
   color: lightgrey;
@@ -55,10 +56,6 @@ nav {
 
 .logo {
   margin-left:192px;
-}
-
-.middlearea {
-  max-height: 200px !important;
 }
 
 .card-header{
