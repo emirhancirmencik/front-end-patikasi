@@ -1,30 +1,57 @@
-// TODO: EKLE BUTONU
 const list = document.querySelector("#list");
-const defList = ["3 Litre Su İç ", "Ödevleri Yap", "En Az 3 Saat Kodlama Yap", "Yemek Yap", "50 Sayfa Kitap Oku"]
+var counter = 0;
+const defList = [
+  "3 Litre Su İç ",
+  "Ödevleri Yap",
+  "En Az 3 Saat Kodlama Yap",
+  "Yemek Yap",
+  "50 Sayfa Kitap Oku",
+];
 
+let userList = localStorage.getItem("userList")
+  ? JSON.parse(localStorage.getItem("userList"))
+  : [];
 
-let userList = localStorage.getItem("userList") ? JSON.parse(localStorage.getItem("userList")) : [];
-
-
-
-
-const CLOSE_BUTTON = `<span class="close">×</span>`
-
-function createLi(documentList, liValue=`${document.querySelector("#task").value}`){
-    const liDom = document.createElement("li");
-    liDom.innerHTML = liValue + CLOSE_BUTTON;
-    documentList.append(liDom);
+function createLi(
+  documentList,
+  liValue = document.querySelector("#task").value
+) {
+  counter++;
+  const liDom = document.createElement("li");
+  const txt = document.createTextNode(liValue);
+  const span = document.createElement("span");
+  var txtBtn = document.createTextNode("\u00D7");
+  liDom.onclick = function () {
+    if (!liDom.classList.contains("checked")) {
+      liDom.classList.add("checked");
+    } else {
+      liDom.classList.remove("checked");
+    }
+  };
+  span.className = "close";
+  span.appendChild(txtBtn);
+  span.onclick = function () {
+    var div = this.parentElement;
+    div.style.display = "none";
+    if (userList.includes(liValue)) {
+      userList.splice(userList.indexOf(liValue), 1);
+      localStorage.setItem("userList", JSON.stringify(userList));
+    }
+  };
+  liDom.appendChild(txt);
+  liDom.appendChild(span);
+  documentList.append(liDom);
 }
 
-function getList(){
-    defList.forEach( item => {
-        createLi(list, (item));
-    })
-    if ( userList.length ){
-        userList.forEach( item => {
-            createLi(list, (item));
-        }) 
-}
+function getList() {
+  defList.forEach((item) => {
+    createLi(list, item);
+  });
+  if (userList.length) {
+    userList.forEach((item) => {
+      createLi(list, item);
+    });
+  }
 }
 
 function newElement() {
@@ -33,18 +60,16 @@ function newElement() {
     document.querySelector("#task").value.replace(/\s/g, "").length
   ) {
     createLi(list);
-    console.log(userList)
+    console.log(userList);
     userList.push(document.querySelector("#task").value);
-    localStorage.setItem("userList",JSON.stringify(userList));
-    
+    localStorage.setItem("userList", JSON.stringify(userList));
   }
 }
-// TODO: SİL BUTONU
 
+const closeButton = document.getElementsByClassName("close");
 
-
-// TODO: YAPILDI FONKSİYONU
+function deleteItem() {
+  console.log("Silindi.");
+}
 
 // TODO: BOOTSTRAP TOAST
-
-

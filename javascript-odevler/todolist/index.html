@@ -14,7 +14,7 @@
     <title>Yapılacaklar Listesi</title>
     
   </head>
-  <body>
+  <body onload="getList()">
     <div class="mr-1" style="position: relative">
       <div style="position: absolute; top: 0; right: 0">
         <div
@@ -78,11 +78,7 @@
       </div>
 
       <ul id="list">
-        <li>3 Litre Su İç</li>
-        <li>Ödevleri Yap</li>
-        <li>En Az 3 Saat Kodlama Yap</li>
-        <li>Yemek Yap</li>
-        <li>50 Sayfa Kitap Oku</li>
+        
       </ul>
       <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -94,6 +90,8 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"
       ></script>
+      <script src="./js/todo.js">
+      </script>
     </div>
   </body>
 </html>
