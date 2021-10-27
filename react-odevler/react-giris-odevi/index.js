@@ -1,3 +1,3 @@
 import getData from "./app.js";
 
-getData();
+getData(1).then(console.log);
