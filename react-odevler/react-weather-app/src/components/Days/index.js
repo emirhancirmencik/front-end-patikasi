@@ -74,7 +74,7 @@ function Days() {
       <div className="row today mycard">
         {weather ? (
           <div className="row">
-            <div className="col-2 mycard ">
+            <div className="col-lg-2 col-md-4 col-sm-6 col-12 mycard ">
               <Card className="mycard border-0">
                 <CardImg
                   alt="Card image cap"
@@ -102,7 +102,7 @@ function Days() {
                 </CardBody>
               </Card>
             </div>
-            <div className="col-10">
+            <div className="col-lg-10 col-md-8 col-sm-6 col-12">
               <div className="col-12">
                 <Card className="mycard border-0">
                   <CardBody>
@@ -116,7 +116,7 @@ function Days() {
                 </Card>
               </div>
               <div className="row p-3">
-                <div className="col-3">
+                <div className="col-lg-3 col-md-6 col-12">
                   <div className="row">
                     <div className="col-6">
                       <img src={sunrise} alt="sunrise"></img>
@@ -136,7 +136,7 @@ function Days() {
                     </div>
                   </div>
                 </div>
-                <div className="col-3">
+                <div className="col-lg-3 col-md-6 col-12">
                   <div className="row">
                     <div className="col-6">
                       <img src={humidity} alt="humidity"></img>
@@ -156,7 +156,7 @@ function Days() {
                     </div>
                   </div>
                 </div>
-                <div className="col-3">
+                <div className="col-lg-3 col-md-6 col-12">
                   <div className="row">
                     <div className="col-6">
                       <img src={warmer} alt="thermometer"></img>
@@ -176,7 +176,7 @@ function Days() {
                     </div>
                   </div>
                 </div>
-                <div className="col-3">
+                <div className="col-lg-3 col-md-6 col-12">
                   <div className="row">
                     <div className="col-6">
                       <img src={windsock} alt="windsock"></img>
@@ -210,7 +210,10 @@ function Days() {
           ? weather.daily.map((e, i) => {
               if (i > 0 && i < 7) {
                 return (
-                  <div className="col-2 mt-3" key={i}>
+                  <div
+                    className="col-lg-2 col-md-3 col-sm-6 col-12 mt-3"
+                    key={i}
+                  >
                     <Card className="light-bg">
                       <CardImg
                         alt="Card image cap"

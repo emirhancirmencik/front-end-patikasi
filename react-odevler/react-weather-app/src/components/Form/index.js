@@ -6,8 +6,7 @@ import WeatherContext from "../../context/WeatherContext";
 import ApiContext from "../../context/ApiContext";
 
 function Form() {
-  const { weather, setWeather, location, setLocation } =
-    useContext(WeatherContext);
+  const { setWeather, location, setLocation } = useContext(WeatherContext);
   const { loading, setLoading } = useContext(LoadingContext);
   const { API_KEY } = useContext(ApiContext);
 
@@ -37,7 +36,7 @@ function Form() {
     <div className="container mt-3">
       <div className="row rounded mycard today p-2 align-items-center">
         <div className="row">
-          <div className="col-3">
+          <div className="col-lg-3 col-md-6 col-sm-9 col-sm-12 ">
             {loading ? (
               "loading..."
             ) : (
@@ -51,7 +50,7 @@ function Form() {
               </div>
             )}
           </div>
-          <div className="col-6 align-self-center">
+          <div className="col-lg-9 align-self-center text-center mt-1">
             {location ? `${location[0].name}, ${location[0].country}` : " "}
           </div>
         </div>

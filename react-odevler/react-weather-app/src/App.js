@@ -14,12 +14,12 @@ function App() {
           <ApiProvider>
             <WeatherProvider>
               <div className="row  round round-cont-top">
-                <div className="col ">
+                <div className="col-lg-12">
                   <Form />
                 </div>
               </div>
               <div className="row  d-flex justify-content-center round-cont-bot">
-                <div className="col-12 m-3">
+                <div className="col-lg-12 m-3">
                   <Days />
                 </div>
               </div>
