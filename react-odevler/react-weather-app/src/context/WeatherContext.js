@@ -33,7 +33,7 @@ export const WeatherProvider = ({ children }) => {
               setWeather(perm);
               return perm;
             }
-            getPosition().then((data) => console.log(data));
+            getPosition();
           },
           () => {
             axios(

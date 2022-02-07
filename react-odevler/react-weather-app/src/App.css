@@ -1,7 +1,16 @@
-.light-bg {
-  background-color: #98bcdb !important;
+.dark-bg {
+  background-color: #222831 !important;
+  color: #eeeeee;
 }
 
+.light-bg {
+  background-color: #ced3dc !important;
+  color: #212529;
+}
+Button {
+  outline: none !important;
+  box-shadow: none !important;
+}
 .today {
   position: relative;
   display: flex;
@@ -14,12 +23,6 @@
   border-radius: 0.25rem;
   left: 12px;
   width: 100%;
-}
-.today-dark {
-  background-color: #6a869e !important;
-}
-.mycard {
-  background-color: #98bcdb !important;
 }
 
 .heat {
@@ -40,5 +43,5 @@
 }
 
 #root {
-  margin-top: 50px;
+  margin-top: 25px;
 }

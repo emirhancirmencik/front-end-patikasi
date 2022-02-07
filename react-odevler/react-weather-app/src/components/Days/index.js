@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import WeatherContext from "../../context/WeatherContext";
+import ThemeContext from "../../context/ThemeContext";
 
 import csDay from "../../icons/01d.svg";
 import csNight from "../../icons/01n.svg";
@@ -33,6 +34,7 @@ import {
 
 function Days() {
   const { weather } = useContext(WeatherContext);
+  const { theme } = useContext(ThemeContext);
 
   function calcTime(t) {
     const weekDay = [
@@ -71,11 +73,15 @@ function Days() {
 
   return (
     <div className="container">
-      <div className="row today mycard">
+      <div className={`row today ${theme ? "dark-bg" : "light-bg"}`}>
         {weather ? (
           <div className="row">
-            <div className="col-lg-2 col-md-4 col-sm-6 col-12 mycard ">
-              <Card className="mycard border-0">
+            <div
+              className={`col-lg-2 col-md-4 col-sm-6 col-12 ${
+                theme ? "dark-bg" : "light-bg"
+              }`}
+            >
+              <Card className={`${theme ? "dark-bg" : "light-bg"} border-0`}>
                 <CardImg
                   alt="Card image cap"
                   src={setIcon(
@@ -104,7 +110,7 @@ function Days() {
             </div>
             <div className="col-lg-10 col-md-8 col-sm-6 col-12">
               <div className="col-12">
-                <Card className="mycard border-0">
+                <Card className={`${theme ? "dark-bg" : "light-bg"} border-0`}>
                   <CardBody>
                     <CardTitle tag="h2">Current Weather</CardTitle>
                     <CardSubtitle>
@@ -131,7 +137,7 @@ function Days() {
                       <img src={sunset} alt="sunset"></img>
                     </div>
                     <div className="col-6 align-self-center">
-                      Sunrise:<br></br>
+                      Sunset:<br></br>
                       {calcTime(weather.current.sunset).time.substring(0, 5)}
                     </div>
                   </div>
@@ -211,10 +217,10 @@ function Days() {
               if (i > 0 && i < 7) {
                 return (
                   <div
-                    className="col-lg-2 col-md-3 col-sm-6 col-12 mt-3"
+                    className="col-lg-2 col-md-3 col-sm-6 col-12 mt-3 "
                     key={i}
                   >
-                    <Card className="light-bg">
+                    <Card className={`${theme ? "dark-bg" : "light-bg"}`}>
                       <CardImg
                         alt="Card image cap"
                         src={setIcon(e.weather[0].id, e.weather[0].icon)}
