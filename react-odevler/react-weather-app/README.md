@@ -2,7 +2,7 @@
 
 ![React Weather App Gif](./react-weather-app.gif)
 
-[Live](weatherapp7d.netlify.app)
+[Live](https://weatherapp7d.netlify.app)
 
 ## Getting Started with Create React App
 
