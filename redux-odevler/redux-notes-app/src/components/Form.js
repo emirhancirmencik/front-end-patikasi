@@ -43,7 +43,7 @@ function Form() {
   }
   return (
     <aside className="h-100">
-      <section className=" bg-dark text-light p-4 h-100">
+      <section className="d-flex flex-column bg-dark text-light p-4 h-100">
         <BootstrapForm onSubmit={handleSubmit}>
           <FormGroup>
             <Label htmlFor="title ">Title</Label>
@@ -122,6 +122,18 @@ function Form() {
             </FormGroup>
           </FormGroup>
         </BootstrapForm>
+        <div className="row text-center" style={{ marginTop: "auto" }}>
+          <p>
+            developed by{" "}
+            <a
+              style={{ color: "black", textDecoration: "none" }}
+              href="https://github.com/emirhancirmencik"
+              className="text-muted"
+            >
+              emirhan cirmencik
+            </a>
+          </p>
+        </div>
       </section>
     </aside>
   );
