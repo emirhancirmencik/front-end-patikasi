@@ -2,21 +2,26 @@ body {
   height: 100vh;
 }
 
-.bg-color {
-  --bs-bg-opacity: 0.2 !important;
-  background-color: rgba(140, 130, 252, var(--bs-bg-opacity)) !important;
-}
-.bg-color-2 {
-  --bs-bg-opacity: 0.2 !important;
-  background-color: rgba(126, 255, 219, var(--bs-bg-opacity)) !important;
-}
-
-.clr-btn {
+.my-btn {
   height: 40px;
   width: 40px;
+  outline: none;
 }
 
 .container-filter {
   height: 100vh;
   width: 100vw;
+}
+
+.btn-clr0 {
+  background-color: rgb(140, 130, 252) !important;
+}
+.btn-clr1 {
+  background-color: rgb(126, 255, 219) !important;
+}
+.btn-clr2 {
+  background-color: rgb(255, 157, 226) !important;
+}
+.btn-clr3 {
+  background-color: rgb(255, 228, 119) !important;
 }

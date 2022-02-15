@@ -1,12 +1,12 @@
 import React from "react";
 import Filter from "./Filter";
-import Todolist from "./Todolist";
+import TodoList from "./TodoList";
 
 function Content() {
   return (
     <div className="container">
       <Filter />
-      <Todolist />
+      <TodoList />
     </div>
   );
 }
