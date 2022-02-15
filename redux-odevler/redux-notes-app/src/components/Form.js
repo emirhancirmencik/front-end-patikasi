@@ -87,28 +87,28 @@ function Form() {
                   <div className="col-6 col-lg-3">
                     <Button
                       type="button"
-                      className="my-btn btn-clr1 mt-1 shadow-none"
-                      onClick={(e) => setColor("btn-clr1")}
+                      className="my-btn bg-clr1 mt-1 shadow-none"
+                      onClick={(e) => setColor("bg-clr1")}
                     >
-                      {color === "btn-clr1" && <img src={check} alt="" />}
+                      {color === "bg-clr1" && <img src={check} alt="" />}
                     </Button>
                   </div>
                   <div className="col-6 col-lg-3">
                     <Button
                       type="button"
-                      className="my-btn btn-clr2 mt-1 shadow-none"
-                      onClick={(e) => setColor("btn-clr2")}
+                      className="my-btn bg-clr2 mt-1 shadow-none"
+                      onClick={(e) => setColor("bg-clr2")}
                     >
-                      {color === "btn-clr2" && <img src={check} alt="" />}
+                      {color === "bg-clr2" && <img src={check} alt="" />}
                     </Button>
                   </div>
                   <div className="col-6 col-lg-3">
                     <Button
                       type="button"
-                      className="my-btn btn-clr3 mt-1 shadow-none"
-                      onClick={(e) => setColor("btn-clr3")}
+                      className="my-btn bg-clr3 mt-1 shadow-none"
+                      onClick={(e) => setColor("bg-clr3")}
                     >
-                      {color === "btn-clr3" && <img src={check} alt="" />}
+                      {color === "bg-clr3" && <img src={check} alt="" />}
                     </Button>
                   </div>
                 </div>

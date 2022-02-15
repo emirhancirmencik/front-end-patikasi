@@ -13,15 +13,12 @@ body {
   width: 100vw;
 }
 
-.btn-clr0 {
-  background-color: rgb(140, 130, 252) !important;
-}
-.btn-clr1 {
+.bg-clr1 {
   background-color: rgb(126, 255, 219) !important;
 }
-.btn-clr2 {
+.bg-clr2 {
   background-color: rgb(255, 157, 226) !important;
 }
-.btn-clr3 {
+.bg-clr3 {
   background-color: rgb(255, 228, 119) !important;
 }
