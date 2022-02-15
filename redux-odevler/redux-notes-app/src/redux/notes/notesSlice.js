@@ -3,26 +3,22 @@ import { createSlice } from "@reduxjs/toolkit";
 export const notesSlice = createSlice({
   name: "notes",
   initialState: {
-    items: [
-      {
-        id: 1,
-        title: "Deneme",
-        text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        color: "bg-light",
-      },
-      {
-        id: 2,
-        title: "Deneme",
-        text: "Some quick example text to build on the card title and make up the bulk of the card's content.",
-        color: "bg-light",
-      },
-    ],
+    items: [],
+    activeFilter: "",
   },
   reducers: {
     addNote: (state, action) => {
       state.items.push(action.payload);
     },
+    destroy: (state, action) => {
+      const id = action.payload;
+      const filtered = state.items.filter((item) => item.id !== id);
+      state.items = filtered;
+    },
+    changeFilter: (state, action) => {
+      state.activeFilter = action.payload;
+    },
   },
 });
-export const { addNote } = notesSlice.actions;
+export const { addNote, destroy, changeFilter } = notesSlice.actions;
 export default notesSlice.reducer;

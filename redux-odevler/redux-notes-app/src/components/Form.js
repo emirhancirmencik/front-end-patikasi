@@ -2,11 +2,9 @@ import { useState } from "react";
 import {
   Button,
   Form as BootstrapForm,
-  FormFeedback,
   FormGroup,
   Label,
   Input,
-  ButtonGroup,
 } from "reactstrap";
 import { nanoid } from "@reduxjs/toolkit";
 
@@ -19,12 +17,29 @@ function Form() {
   const [title, setTitle] = useState("");
   const [note, setNote] = useState("");
   const [color, setColor] = useState("bg-light");
+  const [noteValid, setNoteValid] = useState(true);
+  const [titleValid, setTitleValid] = useState(true);
   function handleSubmit(e) {
     e.preventDefault();
+    if (title.length === 0 && note.length === 0) {
+      setTitleValid(false);
+      setNoteValid(false);
+      return;
+    }
+    if (title.length === 0) {
+      setTitleValid(false);
+      return;
+    }
+    if (note.length === 0) {
+      setNoteValid(false);
+      return;
+    }
 
-    dispatch(addNote({ id: nanoid, title, text: note, color }));
+    dispatch(addNote({ id: nanoid(), title, text: note, color }));
     setTitle("");
     setNote("");
+    setTitleValid(true);
+    setNoteValid(true);
   }
   return (
     <aside className="h-100">
@@ -38,6 +53,7 @@ function Form() {
               value={title}
               className="form-control"
               onChange={(e) => setTitle(e.target.value)}
+              invalid={!titleValid && title.length === 0}
             />
           </FormGroup>
           <FormGroup>
@@ -48,6 +64,7 @@ function Form() {
               value={note}
               rows="3"
               type="textarea"
+              invalid={!noteValid && note.length === 0}
               onChange={(e) => setNote(e.target.value)}
             ></Input>
           </FormGroup>
