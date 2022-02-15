@@ -43,7 +43,7 @@ function Form() {
   }
   return (
     <aside className="h-100">
-      <section className="d-flex flex-column bg-dark text-light p-4 h-100">
+      <section className="d-flex flex-column bg-dark bot-rad text-light p-4 h-100">
         <BootstrapForm onSubmit={handleSubmit}>
           <FormGroup>
             <Label htmlFor="title ">Title</Label>

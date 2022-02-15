@@ -32,6 +32,10 @@ body {
     border-top-right-radius: 0.25rem !important;
     border-top-left-radius: 0.25rem !important;
   }
+  .bot-rad {
+    border-bottom-right-radius: 0.25rem !important;
+    border-bottom-left-radius: 0.25rem !important;
+  }
 }
 
 @media only screen and (min-width: 992px) {
