@@ -75,7 +75,7 @@ function Form() {
               </Label>
               <div className="container ">
                 <div className="row">
-                  <div className="col-6 col-lg-3">
+                  <div className="col-6 col-lg-3 text-center">
                     <Button
                       type="button"
                       className="my-btn btn btn-light mt-1 shadow-none"
@@ -84,7 +84,7 @@ function Form() {
                       {color === "bg-light" && <img src={check} alt="" />}
                     </Button>
                   </div>
-                  <div className="col-6 col-lg-3">
+                  <div className="col-6 col-lg-3 text-center">
                     <Button
                       type="button"
                       className="my-btn bg-clr1 mt-1 shadow-none"
@@ -93,7 +93,7 @@ function Form() {
                       {color === "bg-clr1" && <img src={check} alt="" />}
                     </Button>
                   </div>
-                  <div className="col-6 col-lg-3">
+                  <div className="col-6 col-lg-3 text-center">
                     <Button
                       type="button"
                       className="my-btn bg-clr2 mt-1 shadow-none"
@@ -102,7 +102,7 @@ function Form() {
                       {color === "bg-clr2" && <img src={check} alt="" />}
                     </Button>
                   </div>
-                  <div className="col-6 col-lg-3">
+                  <div className="col-6 col-lg-3 text-center">
                     <Button
                       type="button"
                       className="my-btn bg-clr3 mt-1 shadow-none"

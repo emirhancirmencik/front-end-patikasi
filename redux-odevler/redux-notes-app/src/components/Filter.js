@@ -11,7 +11,7 @@ function Filter() {
   }
 
   return (
-    <div className="row justify-content-center bg-dark text-light rounded-bottom p-2 ">
+    <div className="row justify-content-center bg-dark text-light rounded-bottom top-rad p-2 ">
       <div className="col-4 text-center align-self-center mb-3">
         <div className="form-group filter-text">
           <label htmlFor="title ">Search</label>

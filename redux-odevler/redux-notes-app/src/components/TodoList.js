@@ -11,7 +11,6 @@ function Todolist() {
   const items = useSelector((state) => state.notes.items);
   const filter = useSelector((state) => state.notes.activeFilter);
 
-  console.log(items);
   filtered = items.filter((item) => {
     return Object.keys(item).some((key) =>
       item[key].toString().toLowerCase().includes(filter.toLowerCase())
@@ -21,27 +20,26 @@ function Todolist() {
   window.localStorage.setItem("notes", JSON.stringify(items));
 
   return (
-    <div className="row">
-      {filtered.map((item) => (
-        <div
-          className={`${item.text.length > 114 ? "col-6" : "col-3"} mt-3`}
-          key={item.id}
-        >
-          <Card className={`${item.color}`}>
-            <CardHeader>
-              <img
-                src={close}
-                alt="Close"
-                onClick={() => dispatch(destroy(item.id))}
-              />{" "}
-              {item.title}
-            </CardHeader>
-            <CardBody>
-              <CardText>{item.text}</CardText>
-            </CardBody>
-          </Card>
-        </div>
-      ))}
+    <div className="row mb-3">
+      {filtered.map((item, i) => {
+        return (
+          <div className={"col-lg-3 col-6 h-100 mt-3"} key={item.id}>
+            <Card className={`${item.color}`}>
+              <CardHeader>
+                <img
+                  src={close}
+                  alt="Close"
+                  onClick={() => dispatch(destroy(item.id))}
+                />{" "}
+                {item.title}
+              </CardHeader>
+              <CardBody>
+                <CardText>{item.text}</CardText>
+              </CardBody>
+            </Card>
+          </div>
+        );
+      })}
     </div>
   );
 }

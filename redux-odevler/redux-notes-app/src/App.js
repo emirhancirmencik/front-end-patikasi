@@ -5,12 +5,12 @@ import Content from "./components/Content";
 
 function App() {
   return (
-    <div className="App  ">
-      <div className="row container-filter">
-        <div className="col-12 col-md-3 h-100 pe-0 position-fixed">
+    <div className="App">
+      <div className="row">
+        <div className="col-12 form">
           <Form />
         </div>
-        <div className="col-12 offset-3 col-md-9 h-100">
+        <div className="col-12 filter h-100">
           <Content />
         </div>
       </div>
