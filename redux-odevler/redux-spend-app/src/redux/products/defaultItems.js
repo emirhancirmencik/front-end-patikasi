@@ -271,5 +271,11 @@ const defaultItems = [
   },
 ];
 
-window.localStorage.setItem("products", JSON.stringify(defaultItems));
+if (window.localStorage.getItem("money") === null) {
+  window.localStorage.setItem("money", 100000000000);
+}
+
+if (window.localStorage.getItem("products") === null) {
+  window.localStorage.setItem("products", JSON.stringify(defaultItems));
+}
 export default defaultItems;
