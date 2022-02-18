@@ -194,3 +194,21 @@ input::-webkit-inner-spin-button {
   color: #24c486;
   text-align: right;
 }
+
+@media only screen and (min-width: 900px) {
+  .items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .items {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
