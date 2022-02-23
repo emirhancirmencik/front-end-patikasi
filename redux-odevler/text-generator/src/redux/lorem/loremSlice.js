@@ -3,11 +3,13 @@ import axios from "axios";
 
 export const getLoremAsync = createAsyncThunk(
   "lorem/getLoremAsync",
-  async () => {
+  async (par) => {
+    const data = await par;
     const res = await axios(
-      "https://baconipsum.com/api/?type=all-meat&paras=2&start-with-lorem=1"
+      `https://baconipsum.com/api/?type=meat-and-filler&paras=${data.number}&start-with-lorem=1&format=${data.select}`
     );
-    return res.data;
+
+    return res.data.split("\n");
   }
 );
 
@@ -17,20 +19,11 @@ const loremSlice = createSlice({
     paragraphs: [],
     quantity: 1,
     isHTML: false,
-    isLoading: true,
-    error: null,
   },
   reducers: {},
   extraReducers: {
-    [getLoremAsync.pending]: (state, action) => {
-      state.isLoading = true;
-    },
     [getLoremAsync.fulfilled]: (state, action) => {
       state.paragraphs = action.payload;
-      state.isLoading = false;
-    },
-    [getLoremAsync.rejected]: (state, action) => {
-      state.error = action.error.message;
       state.isLoading = false;
     },
   },

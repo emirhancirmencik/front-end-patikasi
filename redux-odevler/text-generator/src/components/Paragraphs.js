@@ -8,11 +8,11 @@ function Paragraphs() {
     <div className="container my-auto">
       <div className="row w-50 mx-auto">
         {paragraphs.map((paragraph) => {
-          return (
+          return paragraph.length !== 0 ? (
             <div key={nanoid()} className="col-12 mt-4">
               {paragraph}
             </div>
-          );
+          ) : null;
         })}
       </div>
     </div>

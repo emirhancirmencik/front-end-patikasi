@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital@1&display=swap');
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: #F4E185!important;
+    font-size: 16px !important;
+    font-weight: 300 !important;
+}
+
+.header{
+    background-color: #F3950D;
+    border-bottom: 1px black solid;
+}
+
+.font-weight{
+    font-weight: 900!important;
+}
+
+ 
+.mytooltip {
+    position: relative;
+    display: inline-block
+  }
+  
+  .mytooltip .mytooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .mytooltip .mytooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .mytooltip:hover .mytooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
