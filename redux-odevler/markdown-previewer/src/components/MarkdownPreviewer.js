@@ -6,7 +6,7 @@ function MarkdownPreviewer() {
   const text = useSelector((state) => state.markdown.text);
 
   return (
-    <div className="panel h-100 w-100 viewer">
+    <div className="panel h-100 w-100 viewer" id="panel1">
       <ReactMarkdown children={text}>{text}</ReactMarkdown>
     </div>
   );
